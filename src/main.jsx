@@ -20,14 +20,15 @@ const router = createBrowserRouter([
     element: <Root></Root>,
     children:[{
       path:'/',
-      element: <Home></Home>
+      element: <Home></Home>,
+      loader:()=> fetch('http://localhost:5000/craft')
     },
     {
       path:'/allartCraftItems',
       element:<AllItems></AllItems>
     },
     {
-      path:'/AddcraftItem',
+      path:'/addcrafts',
       element:<AddItems></AddItems>
 
     },{
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
       element:<Register></Register>
     }
   ]
-  },
+  },   
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

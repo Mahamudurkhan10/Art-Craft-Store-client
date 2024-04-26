@@ -1,7 +1,7 @@
 [
      {
        "id": 1,
-       "image": "https://example.com/jute_and_wooden_craft_1.jpg",
+       "image": "https://i.ibb.co/nDL5T55/luxury-home-decor.jpg",
        "item_name": "Handcrafted Jute and Wooden Wall Hanging",
        "subcategory_Name": "Home Decor",
        "short_description": "Beautiful wall hanging made from natural jute fibers and wooden beads.",
@@ -13,7 +13,7 @@
      },
      {
        "id": 2,
-       "image": "https://example.com/jute_and_wooden_craft_2.jpg",
+       "image": "https://i.ibb.co/Dw68Hbp/10-Benefits-of-an-Organized-Home-1024x683.jpg",
        "item_name": "Jute and Wooden Storage Basket Set",
        "subcategory_Name": "Home Organization",
        "short_description": "Set of 3 sturdy storage baskets woven with jute and lined with wooden panels.",
@@ -25,9 +25,9 @@
      },
      {
        "id": 3,
-       "image": "https://example.com/jute_and_wooden_craft_3.jpg",
+       "image": "https://i.ibb.co/Br2XLvC/Getty-Images-1257145543-wooden-spoons.jpg",
        "item_name": "Rustic Wooden and Jute Table Runner",
-       "subcategory_Name": "Tableware",
+       "subcategory_Name": "Wooden Utensils and Kitchenware",
        "short_description": "Enhance your table decor with this rustic table runner featuring woven jute and wooden accents.",
        "price": "$24.99",
        "rating": 4.6,
@@ -37,9 +37,9 @@
      },
      {
        "id": 4,
-       "image": "https://example.com/jute_and_wooden_craft_4.jpg",
+       "image": "https://i.ibb.co/s1m1htF/Vietnamese-Natural-Handicraft-Products.png",
        "item_name": "Handmade Wooden and Jute Plant Hanger",
-       "subcategory_Name": "Gardening",
+       "subcategory_Name": "Jute Home Decor",
        "short_description": "Hang your favorite plants in style with this handmade plant hanger crafted from jute rope and wooden ring.",
        "price": "$14.99",
        "rating": 4.5,
@@ -49,9 +49,9 @@
      },
      {
        "id": 5,
-       "image": "https://example.com/jute_and_wooden_craft_5.jpg",
+       "image": "https://i.ibb.co/GH8CGjx/91-Etv-H8x-L-AC-UF1000-1000-QL80.jpg",
        "item_name": "Jute and Wooden Jewelry Box",
-       "subcategory_Name": "Accessories",
+       "subcategory_Name": "Jute Kitchenware & utensils",
        "short_description": "Store your jewelry elegantly in this handcrafted box made from jute and wood.",
        "price": "$19.99",
        "rating": 4.4,
@@ -61,9 +61,9 @@
      },
      {
        "id": 6,
-       "image": "https://example.com/jute_and_wooden_craft_6.jpg",
+       "image": "https://i.ibb.co/xfPMWB8/bead-necklace-OA60-l.jpg",
        "item_name": "Wooden and Jute Serving Tray",
-       "subcategory_Name": "Kitchenware",
+       "subcategory_Name": "Jute and wooden jewellery",
        "short_description": "Serve snacks and drinks in style with this elegant serving tray featuring a wooden base and jute handles.",
        "price": "$34.99",
        "rating": 4.7,
@@ -73,9 +73,9 @@
      },
      {
        "id": 7,
-       "image": "https://example.com/jute_and_wooden_craft_7.jpg",
+       "image": "https://i.ibb.co/3MRDcDb/download.jpg",
        "item_name": "Jute and Wooden Coasters Set",
-       "subcategory_Name": "Tableware",
+       "subcategory_Name": "jute Tableware",
        "short_description": "Protect your table surfaces with this set of 6 coasters crafted from jute and wood.",
        "price": "$12.99",
        "rating": 4.6,
