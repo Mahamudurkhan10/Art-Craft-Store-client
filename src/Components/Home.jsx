@@ -3,8 +3,12 @@ import Banner from "./Banner";
 import Card from "./Card";
 
 
+
 const Home = () => {
-     const crafts = useLoaderData()
+     const crafts = useLoaderData()   
+     
+     
+   
      return (
           <div> 
                
