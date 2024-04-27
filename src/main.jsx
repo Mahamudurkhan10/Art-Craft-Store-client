@@ -14,6 +14,7 @@ import MycraftList from './Layout/MycraftList';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import Auth from './AuthProvider/Auth';
+import CardDetails from './Layout/CardDetails';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
     },{
       path:'/register',
       element:<Register></Register>
+    },
+    {
+      path:'/view/:id',
+      element: <CardDetails></CardDetails>,
+      loader: ({params})=> fetch(`http://localhost:5000/view/${params.id}`)
     }
   ]
   },   

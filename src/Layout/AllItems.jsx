@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import { BsCurrencyDollar } from "react-icons/bs";
 
 const AllItems = () => {
@@ -30,7 +30,7 @@ const AllItems = () => {
                                    <td> {craft.email} </td>
                                    <td> {craft.name} </td>
                                    <td className="flex  mt-4 items-center"> <BsCurrencyDollar></BsCurrencyDollar> {craft.price} </td>
-                                   <td> <button className="btn btn-info  "> View Details  </button> </td>
+                                   <td> <NavLink to={`/view/${craft._id}`}><button className="btn btn-info  "> View Details  </button></NavLink> </td>
                               </tr>)
                             }
                           
