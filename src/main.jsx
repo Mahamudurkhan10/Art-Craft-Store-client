@@ -13,6 +13,7 @@ import AddItems from './Layout/AddItems';
 import MycraftList from './Layout/MycraftList';
 import Login from './Components/Login';
 import Register from './Components/Register';
+import Auth from './AuthProvider/Auth';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,6 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+   <Auth>  <RouterProvider router={router} /> </Auth>
   </React.StrictMode>,
 )

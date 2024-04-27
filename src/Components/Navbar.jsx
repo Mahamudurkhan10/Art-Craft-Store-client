@@ -1,7 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaChartPie } from "react-icons/fa";
-
+import { useContext } from "react";
+import { LuLogOut } from "react-icons/lu";
+import { AuthContext } from "../AuthProvider/Auth";
 const Navbar = () => {
+   const {logOut, user}= useContext(AuthContext)
+  
+   const handleLogOut = ()=>{
+     logOut()
+   }
      const Navbar = <>
      <NavLink className={'font-semibold'} to={'/'}> <li><a> Home</a></li></NavLink>
      <NavLink className={'font-semibold'} to={'/allartCraftItems'}> <li><a> All Art & craft Items</a></li></NavLink>
@@ -12,7 +19,7 @@ const Navbar = () => {
  
    </>
    return (
-     <div className="navbar mt-11 bg-base-100">
+     <div className="navbar mb-32 lg:mb-0 mt-11 bg-base-100">
        <div className="navbar-start">
          <div className="dropdown ">
            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -30,7 +37,18 @@ const Navbar = () => {
          </ul>
        </div>
        <div className="navbar-end">
-       <NavLink to={'/login'} >  <a className="btn rounded-full"> Login </a></NavLink>
+       {
+          user ? (
+            <>
+            <div className="tooltip" data-tip={user?.displayName|| 'not fount'}> <span> <img className="rounded-full size-10 mr-3 border-2 border-red-600" src= { user?.photoURL ||"https://i.ibb.co/YX7cm4v/bd886d7ccc6f8dd8db17e841233c9656.jpg"} alt="" /> </span></div>
+             <a href="" onClick={handleLogOut} className="btn"> <LuLogOut></LuLogOut> LogOUt</a>
+            </>
+          ):(
+            <Link to={'/login'}>
+              <a href="" className="btn"> <LuLogOut></LuLogOut> Log In </a>
+            </Link>
+          )
+        }
        </div>
      </div>
    );

@@ -1,13 +1,15 @@
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/Auth";
 
 
 const AddItems = () => {
 
-
+const {user}=useContext(AuthContext)
 
   const   handleCraftfrom =(e)=>{
                e.preventDefault()
                const form = e.target
-               const email = e.target.email.value 
+               const email = user.email
                const name =e.target.name.value 
                const photo = e.target.photo.value 
                const item_name = e.target.item_name.value 
@@ -50,7 +52,7 @@ const AddItems = () => {
                               </label>
                               <div className="join">
 
-                                   <input className="input input-bordered text-sm w-full join-item" type="email" name="email" placeholder='Email Please' required/>
+                                   <input className="input input-bordered text-sm w-full join-item" type="email" name="email" placeholder='Email Please' defaultValue={user?.email} disabled required/>
 
                               </div>
 
@@ -62,7 +64,7 @@ const AddItems = () => {
                               </label>
                               <div className="join">
 
-                                   <input type="text" name="name" className="input input-bordered text-sm w-full join-item" placeholder=" Your Name" />
+                                   <input type="text" name="name" className="input input-bordered text-sm w-full join-item" placeholder=" Your Name" defaultValue={user?.displayName} disabled/>
 
                               </div>
 
