@@ -4,6 +4,9 @@ import Card from "./Card";
 
 import CardCollection from "./CardCollection";
 
+import Review from "./Review";
+import Achievement from "./Achievement";
+
 
 
 const Home = () => {
@@ -16,7 +19,7 @@ const Home = () => {
                
                <Banner> </Banner>
                <div className=" mt-5 mb-6 w-1/2 mx-auto text-center">
-                    <h1 className=" text-3xl font-extrabold mb-2"> Art & Craft Store Features </h1>
+                    <h1 className=" text-3xl font-extrabold text-green-700 mb-2"> Art & Craft Store Features </h1>
                     <p > Serve snacks and drinks in style with this elegant serving tray featuring a wooden base and jute handles </p>
                </div>
                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
@@ -41,6 +44,12 @@ const Home = () => {
                    </div>
                </div>
 
+                    <div>
+                         <Review></Review>
+                    </div>
+                    <div className="mt-9">
+                         <Achievement></Achievement>
+                    </div>
           </div>
      );
 };

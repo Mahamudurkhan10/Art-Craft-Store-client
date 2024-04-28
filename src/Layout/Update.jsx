@@ -43,7 +43,7 @@ const Update = () => {
      return (
           <div className="px-24 py-8 bg-gray-50">
           <div>
-               <h1 className="text-3xl mb-4 font-bold text-blue-600 text-center"> Add Craft Item  </h1>
+               <h1 className="text-3xl mb-4 font-bold text-blue-600 text-center"> Update Craft Item  </h1>
           </div>
           <form onSubmit={handleUpdate} action="">
              
