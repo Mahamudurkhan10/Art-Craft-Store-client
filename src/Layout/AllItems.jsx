@@ -3,7 +3,7 @@ import { BsCurrencyDollar } from "react-icons/bs";
 
 const AllItems = () => {
      const crafts = useLoaderData();
-     console.log(crafts);
+    
      return (
           <div className="mb-8">
                    <div className="text-3xl font-bold w-1/2 mx-auto text-center m-5 text-green-600">

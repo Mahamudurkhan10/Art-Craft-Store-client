@@ -15,6 +15,7 @@ import Login from './Components/Login';
 import Register from './Components/Register';
 import Auth from './AuthProvider/Auth';
 import CardDetails from './Layout/CardDetails';
+import Update from './Layout/Update';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,12 @@ const router = createBrowserRouter([
       path:'/view/:id',
       element: <CardDetails></CardDetails>,
       loader: ({params})=> fetch(`http://localhost:5000/view/${params.id}`)
+    },
+    {
+      path:'/update/:id',
+      element: <Update></Update>,
+      loader:({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
+
     }
   ]
   },   

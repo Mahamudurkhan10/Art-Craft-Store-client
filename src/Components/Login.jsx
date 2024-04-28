@@ -4,6 +4,7 @@ import { AuthContext } from "../AuthProvider/Auth";
 
 const Login = () => {
      const {googleLogin}=useContext(AuthContext)
+     
      const handleGoogle = ()=>{
           console.log('click hoise')
           googleLogin()

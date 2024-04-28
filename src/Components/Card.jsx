@@ -2,11 +2,11 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { IoMdStar } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 const Card = ({ craft }) => {
-    const {photo,item_name,customization,stockstatus,subcategory_name,shortdescription,rating,price}=craft;
+    const {photo,item_name,customization,processing_time, stockstatus,subcategory_name,shortdescription,rating,price}=craft;
      return (
           <div>
                <div className="card bg-gray-100 h-[480px] hover:shadow-2xl card-compact p-3  shadow-sm">
-                    <figure><img src={photo} className="size-[300px]" alt="Shoes" /></figure>
+                    <figure><img src={photo} className="size-[300px]"  alt="Shoes" /></figure>
                     <div className="card-body">
                          <h2 className="card-title font-bold">  {item_name} </h2>
                           <p className="font-semibold">  {subcategory_name} </p>
@@ -17,7 +17,7 @@ const Card = ({ craft }) => {
                            </div>
                          
                            <p className=" font-medium"> Description: <span className="text-sm font-normal">{shortdescription} </span> </p>
-                          
+                           <p className="font-medium text-pink-600"> processing_time :  {processing_time} </p>
                            <div className="flex text-green-700">
                               <p> Customization: <span className="text-sm font-bold"> {customization} </span> </p>
                               <p> Stock Status: <span className="text-sm font-bold"> {stockstatus} </span> </p>

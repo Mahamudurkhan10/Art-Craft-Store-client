@@ -5,7 +5,7 @@ import { IoMdStar } from "react-icons/io";
 const CardDetails = () => {
      const craft = useLoaderData()
  
-     const {photo,item_name,customization,stockstatus,subcategory_name,shortdescription,rating,price}=craft;
+     const {photo,item_name,customization,processing_time, stockstatus,subcategory_name,shortdescription,rating,price}=craft;
      
      return (
           <div>
@@ -26,7 +26,7 @@ const CardDetails = () => {
                            </div>
                          
                            <p className=" font-medium"> Description: <span className="text-sm font-normal">{shortdescription} </span> </p>
-                          
+                           <p className="font-medium text-pink-600"> processing_time: {processing_time} </p>
                            <div className="flex text-green-700">
                               <p> Customization: <span className="text-sm font-bold"> {customization} </span> </p>
                               <p> Stock Status: <span className="text-sm font-bold"> {stockstatus} </span> </p>
