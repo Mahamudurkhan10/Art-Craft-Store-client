@@ -16,6 +16,7 @@ import Register from './Components/Register';
 import Auth from './AuthProvider/Auth';
 import CardDetails from './Layout/CardDetails';
 import Update from './Layout/Update';
+import Private from './Pages/Private';
 
 const router = createBrowserRouter([
   {
@@ -33,11 +34,11 @@ const router = createBrowserRouter([
     },
     {
       path:'/addcrafts',
-      element:<AddItems></AddItems>
+      element:<Private><AddItems></AddItems></Private>
 
     },{
       path:'/myArtCraftlist',
-      element:<MycraftList></MycraftList>
+      element:<Private><MycraftList></MycraftList></Private>
     },
     {
       path:'/login',
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
     },
     {
       path:'/view/:id',
-      element: <CardDetails></CardDetails>,
+      element: <Private><CardDetails></CardDetails></Private>,
       loader: ({params})=> fetch(`http://localhost:5000/view/${params.id}`)
     },
     {

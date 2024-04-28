@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
+import Swal from "sweetalert2";
 
 const Login = () => {
      const {googleLogin, loginPass,githubLogin}=useContext(AuthContext)
@@ -12,7 +13,14 @@ const Login = () => {
           const password = e.target.password.value;
             loginPass(email,password)
             .then(result =>{
-               setSuccess(alert('login done',result))
+               setSuccess(
+                    Swal.fire({
+                    title: "Login done!",
+                    text: "Your Craft has been Updated.",
+                    icon: "success"
+
+               })
+          )
                
           })
           .catch(error =>{

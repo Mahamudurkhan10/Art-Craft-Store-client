@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
@@ -19,7 +20,15 @@ const Register = () => {
                register(email, password)
                .then(() => {
                   updatePP(name,photo)
-                  setSuccess(alert('successfully register'))
+                  setSuccess(
+                    Swal.fire({
+                         title: "Register done!",
+                         text: "Your Craft has been Updated.",
+                         icon: "success"
+     
+                    })
+
+                  )
                })
           }
           else{
