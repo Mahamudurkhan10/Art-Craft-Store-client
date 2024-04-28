@@ -1,9 +1,11 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 const Update = () => { 
      const craft = useLoaderData()
+     const navigate = useNavigate()
+     const location = useLocation()
      const {photo,_id,item_name,customization, processing_time,stockstatus,subcategory_name,shortdescription,rating,price}=craft;
      const   handleUpdate =(e)=>{
           e.preventDefault()
@@ -29,7 +31,7 @@ const Update = () => {
            
           .then(res =>res.json())
           .then(data =>{
-               console.log(data)
+              
                if(data.modifiedCount >0){
                     Swal.fire({
                          title: "Update!",
@@ -37,6 +39,7 @@ const Update = () => {
                          icon: "success"
 
                     });
+                    navigate(location?.state ? location.state : '/')
                }
           })
      }

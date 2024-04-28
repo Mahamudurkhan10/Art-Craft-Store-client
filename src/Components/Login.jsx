@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
 import Swal from "sweetalert2";
 
@@ -7,6 +7,8 @@ const Login = () => {
      const {googleLogin, loginPass,githubLogin}=useContext(AuthContext)
      const [success,setSuccess]= useState('')
      const [ error , setError]= useState('')
+     const location =useLocation()
+     const navigate = useNavigate()
      const handleLoginForm = (e)=>{
           e.preventDefault()
           const email = e.target.email.value;
@@ -21,7 +23,7 @@ const Login = () => {
 
                })
           )
-               
+          navigate(location?.state ? location.state : '/')   
           })
           .catch(error =>{
                setError(error.message)

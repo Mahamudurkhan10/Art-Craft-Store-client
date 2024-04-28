@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
 import Swal from "sweetalert2";
 
@@ -8,6 +8,8 @@ const Register = () => {
      const {register, updatePP}=useContext(AuthContext)
      const [success,setSuccess]= useState('')
      const [error, setError] = useState('') 
+     const location = useLocation()
+   const navigate = useNavigate()
      const handleRegister = (e) => {
           e.preventDefault()
           const email = e.target.email.value
@@ -21,14 +23,16 @@ const Register = () => {
                .then(() => {
                   updatePP(name,photo)
                   setSuccess(
+                  
                     Swal.fire({
                          title: "Register done!",
                          text: "Your Craft has been Updated.",
                          icon: "success"
      
                     })
-
+                  
                   )
+                  navigate(location?.state ? location.state : '/')
                })
           }
           else{
