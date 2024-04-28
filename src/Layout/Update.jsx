@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const Update = () => {
+const Update = () => { 
      const craft = useLoaderData()
      const {photo,_id,item_name,customization, processing_time,stockstatus,subcategory_name,shortdescription,rating,price}=craft;
      const   handleUpdate =(e)=>{
