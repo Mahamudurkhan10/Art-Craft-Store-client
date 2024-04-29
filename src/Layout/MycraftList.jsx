@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 
 const MycraftList = () => {
      const { user } = useContext(AuthContext)
+     const [newCrafts,setNewCrafts]=useState([])
      const [crafts, setCrafts] = useState([]);
      const handleDelete = (_id) => {
           console.log(_id)
@@ -21,10 +22,10 @@ const MycraftList = () => {
           }).then((result) => {
                if (result.isConfirmed) {
 
-                    fetch(`https://art-craft-store-server-two.vercel.app/craft/${_id}`,{
-                         method:'DELETE'
+                    fetch(`https://art-craft-store-server-two.vercel.app/craft/${_id}`, {
+                         method: 'DELETE'
                     }
-                )
+                    )
                          .then(res => res.json())
                          .then(data => {
                               if (data.deletedCount > 0) {
@@ -42,18 +43,44 @@ const MycraftList = () => {
           });
      }
      useEffect(() => {
-          fetch(`https://art-craft-store-server-two.vercel.app/mycraft/${user?.email}` )
+          fetch(`https://art-craft-store-server-two.vercel.app/mycraft/${user?.email}`)
                .then(res => res.json())
                .then(data => {
                     setCrafts(data)
                })
      }, [user])
+  const handleCraft = (filter)=>{
+     if(filter ==='All' ){
+          setNewCrafts(crafts)
+     }
+     else if(filter === 'yes'){
+          const result = crafts.filter(craft => craft.customization ==='yes')
+          setNewCrafts(result)
+     }
+     else if (filter === 'no'){
+          const result = crafts.filter(craft => craft.customization ==='no')
+          setNewCrafts(result)
+     }
 
+  }
      return (
           <div>
-               <div className="grid grid-cols-1 lg:grid-cols-2 p-4 gap-4">
+               <div className="flex justify-center mb-10">
+                    <details className="dropdown  dropdown-right p-5 ">
+                         <summary className="m-1 font-bold text-sky-600  btn"> My Craft </summary>
+                         <ul className="p-2 text-emerald-500 font-bold shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                              <li onClick={()=>handleCraft('All') }><a>All</a></li>
+                               <h1> customization:
+                                   <li onClick={()=>handleCraft('yes') }><a>yes</a></li>
+                              <li onClick={()=>handleCraft('no')}><a>no</a></li>
+                               </h1>
+                         </ul>
+                    </details>
+               </div>
+               <div className="grid grid-cols-1  lg:grid-cols-2 p-4 gap-4">
+
                     {
-                         crafts.map(craft => <div key={craft._id}>
+                         newCrafts.map(craft => <div key={craft._id}>
 
                               <div className="card  bg-gray-100 h-[400px] hover:shadow-2xl card-compact p-3  shadow-sm">
                                    <figure><img src={craft.photo} className="size-[300px]" alt="Shoes" /></figure>
@@ -65,7 +92,7 @@ const MycraftList = () => {
                                              <p className="flex gap-1"> Rating :<span className="text-sm flex items-center font-bold">  {craft.rating} <IoMdStar></IoMdStar> </span></p>
 
                                         </div>
-                                         <p className="text-purple-600 font-medium"> processing_time : {craft.processing_time} </p>
+                                        <p className="text-purple-600 font-medium"> processing_time : {craft.processing_time} </p>
 
                                         <div>
                                              <p className="text-pink-500"> Email : {craft.email} </p>
