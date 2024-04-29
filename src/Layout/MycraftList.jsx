@@ -21,7 +21,7 @@ const MycraftList = () => {
           }).then((result) => {
                if (result.isConfirmed) {
 
-                    fetch(`http://localhost:5000/craft/${_id}`,{
+                    fetch(`https://art-craft-store-server-two.vercel.app/craft/${_id}`,{
                          method:'DELETE'
                     }
                 )
@@ -42,7 +42,7 @@ const MycraftList = () => {
           });
      }
      useEffect(() => {
-          fetch(`http://localhost:5000/mycraft/${user?.email}`)
+          fetch(`https://art-craft-store-server-two.vercel.app/mycraft/${user?.email}` )
                .then(res => res.json())
                .then(data => {
                     setCrafts(data)

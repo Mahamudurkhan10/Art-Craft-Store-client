@@ -26,12 +26,12 @@ const router = createBrowserRouter([
     children:[{
       path:'/',
       element: <Home></Home>,
-      loader:()=> fetch('http://localhost:5000/craft')
+      loader:()=> fetch('https://art-craft-store-server-two.vercel.app/craft')
     },
     {
       path:'/allartCraftItems',
       element:<AllItems></AllItems>,
-      loader:()=> fetch('http://localhost:5000/craft')
+      loader:()=> fetch('https://art-craft-store-server-two.vercel.app/craft')
     },
     {
       path:'/addcrafts',
@@ -51,18 +51,18 @@ const router = createBrowserRouter([
     {
       path:'/view/:id',
       element: <Private><CardDetails></CardDetails></Private>,
-      loader: ({params})=> fetch(`http://localhost:5000/view/${params.id}`)
+      loader: ({params})=> fetch(`https://art-craft-store-server-two.vercel.app/view/${params.id}`)
     },
     {
       path:'/update/:id',
       element: <Update></Update>,
-      loader:({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
+      loader:({params})=> fetch(`https://art-craft-store-server-two.vercel.app/craft/${params.id}`)
 
     },
     {
       path: '/subcraft/:id',
       element:<CardCollectionDetails></CardCollectionDetails>,
-      loader: ({params})=> fetch(`http://localhost:5000/subcraft/${params.id}`)
+      loader: ({params})=> fetch(`https://art-craft-store-server-two.vercel.app/subcraft/${params.id}`)
     }
   ]
   },   

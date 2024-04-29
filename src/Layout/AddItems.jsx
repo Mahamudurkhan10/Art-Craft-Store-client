@@ -23,7 +23,8 @@ const {user}=useContext(AuthContext)
                const stockstatus = e.target.stockstatus.value
                const craftItem = {email,name,photo,item_name,customization,processing_time, stockstatus,subcategory_name,shortdescription,rating,price}
                console.log(craftItem)
-               fetch('http://localhost:5000/craft',{   
+               fetch('https://art-craft-store-server-two.vercel.app/craft',{   
+                   
                     method:'POST',
                     headers:{
                          'content-type':'application/json'

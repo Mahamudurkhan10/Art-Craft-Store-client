@@ -15,7 +15,7 @@ const Home = () => {
      
      const [newCrafts , setNewCrafts]=useState([])
      useEffect(()=>{
-          fetch(`http://localhost:5000/subcraft`)
+          fetch(`https://art-craft-store-server-two.vercel.app/subcraft`)
           .then(res => res.json())
           .then(data =>{
                setNewCrafts(data)
@@ -23,7 +23,7 @@ const Home = () => {
      },[])
    
      return (
-          <div> 
+          <div className="font-Lato"> 
                
                <Banner> </Banner>
                <div className=" mt-5 mb-6 w-1/2 mx-auto text-center">

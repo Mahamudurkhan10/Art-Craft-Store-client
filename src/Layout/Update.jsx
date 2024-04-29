@@ -21,7 +21,8 @@ const Update = () => {
           const stockstatus = e.target.stockstatus.value
           const newCraftItem = {photo,item_name,customization,processing_time, stockstatus,subcategory_name,shortdescription,rating,price}
           console.log(newCraftItem);
-          fetch(`http://localhost:5000/craft/${_id}`,{   
+          fetch(`https://art-craft-store-server-two.vercel.app/craft/${_id}`,{ 
+               
                method:'PUT',
                headers:{
                     'content-type':'application/json'
