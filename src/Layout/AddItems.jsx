@@ -47,7 +47,7 @@ const {user}=useContext(AuthContext)
                })
   }
      return (
-          <div className="px-24 py-8 bg-gray-50">
+          <div className="px-24 py-8 bg-slate-200 font-bold lg:bg-gray-50">
                <div>
                     <h1 className="text-3xl mb-4 font-bold text-blue-600 text-center"> Add Craft Item  </h1>
                </div>
@@ -77,7 +77,7 @@ const {user}=useContext(AuthContext)
 
                          </div>
                     </div>
-                    <div className="flex gap-6">
+                    <div className="lg:flex gap-6">
                          <div className='form-control w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text text-lg '> Image ( use image URL)</span>
@@ -102,7 +102,7 @@ const {user}=useContext(AuthContext)
 
                          </div>
                     </div>
-                    <div className="flex gap-6">
+                    <div className="lg:flex gap-6">
                          <div className='form-control w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text text-lg '> subcategory_Name

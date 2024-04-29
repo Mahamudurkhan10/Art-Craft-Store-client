@@ -36,7 +36,7 @@ const MycraftList = () => {
 
                                    });
                                    const remaining = crafts.filter(craft => craft._id !== _id)
-                                   setCrafts(remaining)
+                                   setNewCrafts(remaining)
                               }
                          })
                }
@@ -65,9 +65,9 @@ const MycraftList = () => {
   }
      return (
           <div>
-               <div className="flex justify-center mb-10">
-                    <details className="dropdown  dropdown-right p-5 ">
-                         <summary className="m-1 font-bold text-sky-600  btn"> My Craft </summary>
+               <div className="flex justify-center  lg:mb-10">
+                    <details className="dropdown  lg:dropdown-right lg:p-5 ">
+                         <summary className="m-1 font-bold text-sky-600 text-2xl btn"> My Craft </summary>
                          <ul className="p-2 text-emerald-500 font-bold shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                               <li onClick={()=>handleCraft('All') }><a>All</a></li>
                                <h1> customization:
@@ -77,7 +77,7 @@ const MycraftList = () => {
                          </ul>
                     </details>
                </div>
-               <div className="grid grid-cols-1  lg:grid-cols-2 p-4 gap-4">
+               <div className="grid grid-cols-1 mt-32 lg:mt-4 lg:grid-cols-2 p-4 gap-4">
 
                     {
                          newCrafts.map(craft => <div key={craft._id}>
