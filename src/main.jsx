@@ -17,6 +17,7 @@ import Auth from './AuthProvider/Auth';
 import CardDetails from './Layout/CardDetails';
 import Update from './Layout/Update';
 import Private from './Pages/Private';
+import CardCollectionDetails from './Components/CardCollectionDetails';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,11 @@ const router = createBrowserRouter([
       element: <Update></Update>,
       loader:({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
 
+    },
+    {
+      path: '/subcraft/:id',
+      element:<CardCollectionDetails></CardCollectionDetails>,
+      loader: ({params})=> fetch(`http://localhost:5000/subcraft/${params.id}`)
     }
   ]
   },   

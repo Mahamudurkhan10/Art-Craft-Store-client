@@ -26,7 +26,7 @@ const Register = () => {
                   
                     Swal.fire({
                          title: "Register done!",
-                         text: "Your Craft has been Updated.",
+                         text: " success fully register.",
                          icon: "success"
      
                     })

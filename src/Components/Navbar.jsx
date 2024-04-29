@@ -26,10 +26,10 @@ const Navbar = () => {
     logOut()
   }
   const Navbar = <>
-    <NavLink className={'font-semibold'} to={'/'}> <li><a> Home</a></li></NavLink>
-    <NavLink className={'font-semibold'} to={'/allartCraftItems'}> <li><a> All Art & craft Items</a></li></NavLink>
-    <NavLink className={'font-semibold'} to={'/addcrafts'}> <li><a> Add Craft Item</a></li></NavLink>
-    <NavLink className={'font-semibold'} to={'/myArtCraftlist'}> <li><a> My Art&Craft List</a></li></NavLink>
+    <NavLink className={({isActive})=>isActive?'font-bold text-primary':'font-semibold'} to={'/'}> <li><a> Home</a></li></NavLink>
+    <NavLink className={({isActive})=>isActive?'font-bold text-primary':'font-semibold'} to={'/allartCraftItems'}> <li><a> All Art & craft Items</a></li></NavLink>
+    <NavLink className={({isActive})=>isActive?'font-bold text-primary':'font-semibold'} to={'/addcrafts'}> <li><a> Add Craft Item</a></li></NavLink>
+    <NavLink className={({isActive})=>isActive?'font-bold text-primary':'font-semibold'} to={'/myArtCraftlist'}> <li><a> My Art&Craft List</a></li></NavLink>
 
 
 

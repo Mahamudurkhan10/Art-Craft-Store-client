@@ -6,13 +6,21 @@ import CardCollection from "./CardCollection";
 
 import Review from "./Review";
 import Achievement from "./Achievement";
+import { useEffect, useState } from "react";
 
 
 
 const Home = () => {
      const crafts = useLoaderData()   
      
-     
+     const [newCrafts , setNewCrafts]=useState([])
+     useEffect(()=>{
+          fetch(`http://localhost:5000/subcraft`)
+          .then(res => res.json())
+          .then(data =>{
+               setNewCrafts(data)
+          })
+     },[])
    
      return (
           <div> 
@@ -32,12 +40,13 @@ const Home = () => {
 
              </div>
                <div>
-                     <div className="text-3xl font-extrabold text-center mt-6 text-green-600">
-                         <h1>Art & Craft Categories   </h1>
+                     <div className=" lg:w-1/2 lg:mx-auto text-center mt-6">
+                         <h1 className=" text-3xl  font-extrabold text-green-600">Art & Craft Categories   </h1>
+                         <h1> Art and craft projects provide opportunities for collaboration and social interaction, fostering connections within communities and across cultures </h1>
                      </div>
-                   <div className="grid lg:grid-cols-3 gap-4 grid-cols-1 md:grid-cols-2 ">
+                   <div className="grid lg:grid-cols-3 gap-4  grid-cols-1 md:grid-cols-2 ">
                    {
-                         crafts.slice(0,6).map( craft => <div key={craft._id}> 
+                         newCrafts.map( craft => <div key={craft._id}> 
                               <CardCollection craft={craft}></CardCollection>
                          </div> )
                     }
@@ -49,6 +58,9 @@ const Home = () => {
                     </div>
                     <div className="mt-9">
                          <Achievement></Achievement>
+                    </div>
+                    <div>
+                         <h1> {newCrafts.length} </h1>
                     </div>
           </div>
      );
