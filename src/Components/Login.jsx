@@ -2,11 +2,13 @@ import { useContext, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
 import Swal from "sweetalert2";
-
+import { FaEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa6";
 const Login = () => {
      const {googleLogin, loginPass,githubLogin}=useContext(AuthContext)
      const [success,setSuccess]= useState('')
      const [ error , setError]= useState('')
+     const  [ showPassword,setShowPassword]=useState(false)
      const location =useLocation()
      const navigate = useNavigate()
      const handleLoginForm = (e)=>{
@@ -48,11 +50,11 @@ const Login = () => {
                     </div>
                     <div className=" relative space-y-1 text-sm">
                          <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                         <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
-                         <span className=" absolute top-1/2 right-2" > 
-                            {/* {
+                         <input type= {showPassword ?'text': 'password' } name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                         <span className=" absolute top-1/2 right-2" onClick={()=>setShowPassword(!showPassword)}> 
+                            {
                               showPassword? <FaEyeSlash></FaEyeSlash>: <FaEye></FaEye>
-                            } */}
+                            }
                           </span>
                         
                     </div>

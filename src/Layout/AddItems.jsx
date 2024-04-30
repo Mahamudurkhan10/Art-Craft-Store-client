@@ -52,8 +52,8 @@ const {user}=useContext(AuthContext)
                     <h1 className="text-3xl mb-4 font-bold text-blue-600 text-center"> Add Craft Item  </h1>
                </div>
                <form onSubmit={handleCraftfrom} action="">
-                    <div className="flex gap-6">
-                         <div className='form-control w-1/2'>
+                    <div className="lg:flex gap-6">
+                         <div className='form-control lg:w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text text-lg '> Email</span>
                               </label>
@@ -64,7 +64,7 @@ const {user}=useContext(AuthContext)
                               </div>
 
                          </div>
-                         <div className='form-control w-1/2'>
+                         <div className='form-control lg:w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text  text-lg'>  Name
                                    </span>
@@ -78,7 +78,7 @@ const {user}=useContext(AuthContext)
                          </div>
                     </div>
                     <div className="lg:flex gap-6">
-                         <div className='form-control w-1/2'>
+                         <div className='form-control lg:w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text text-lg '> Image ( use image URL)</span>
                               </label>
@@ -89,7 +89,7 @@ const {user}=useContext(AuthContext)
                               </div>
 
                          </div>
-                         <div className='form-control w-1/2'>
+                         <div className='form-control lg:w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text  text-lg'> item_name
                                    </span>
@@ -103,7 +103,7 @@ const {user}=useContext(AuthContext)
                          </div>
                     </div>
                     <div className="lg:flex gap-6">
-                         <div className='form-control w-1/2'>
+                         <div className='form-control lg:w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text text-lg '> subcategory_Name
                                    </span>
@@ -115,7 +115,7 @@ const {user}=useContext(AuthContext)
                               </div>
 
                          </div>
-                         <div className='form-control w-1/2'>
+                         <div className='form-control lg:w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text  text-lg'> short description
 
@@ -129,8 +129,8 @@ const {user}=useContext(AuthContext)
 
                          </div>
                     </div>
-                    <div className="flex gap-6">
-                         <div className='form-control w-1/2'>
+                    <div className="lg:flex gap-6">
+                         <div className='form-control lg:w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text text-lg '>price</span>
                               </label>
@@ -141,7 +141,7 @@ const {user}=useContext(AuthContext)
                               </div>
 
                          </div>
-                         <div className='form-control w-1/2'>
+                         <div className='form-control lg:w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text  text-lg'> rating
                                    </span>
@@ -154,8 +154,8 @@ const {user}=useContext(AuthContext)
 
                          </div>
                     </div>
-                    <div className="flex gap-6">
-                         <div className='form-control w-1/2'>
+                    <div className="lg:flex gap-6">
+                         <div className='form-control lg:w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text text-lg '>processing_time</span>
                               </label>
@@ -166,7 +166,7 @@ const {user}=useContext(AuthContext)
                               </div>
 
                          </div>
-                         <div className='form-control w-1/2'>
+                         <div className='form-control lg:w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text  text-lg'>
                                         customization
@@ -185,7 +185,7 @@ const {user}=useContext(AuthContext)
 
                          </div>
                     </div>
-                    <div className='form-control w-1/2'>
+                    <div className='form-control lg:w-1/2'>
                               <label htmlFor="" className='label'>
                                    <span className='label-text  text-lg'>
                                    stockStatus
