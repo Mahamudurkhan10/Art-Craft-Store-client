@@ -3,9 +3,7 @@ import Swal from "sweetalert2";
 
 
 const Update = () => {
-     useEffect(() => {
-          document.title = 'Update'
-     }, [])
+    
      const craft = useLoaderData()
      const navigate = useNavigate()
      const location = useLocation()

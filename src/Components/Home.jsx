@@ -62,9 +62,7 @@ const Home = () => {
                     <div className="mt-9">
                          <Achievement></Achievement>
                     </div>
-                    <div>
-                         <h1> {newCrafts.length} </h1>
-                    </div>
+                   
           </div>
      );
 };
