@@ -11,6 +11,9 @@ import { useEffect, useState } from "react";
 
 
 const Home = () => {
+     useEffect(()=>{
+          document.title = 'Home'
+      },[])
      const crafts = useLoaderData()   
      
      const [newCrafts , setNewCrafts]=useState([])

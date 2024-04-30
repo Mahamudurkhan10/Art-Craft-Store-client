@@ -1,8 +1,12 @@
 import { NavLink, useLoaderData } from "react-router-dom";
 import { BsCurrencyDollar } from "react-icons/bs";
+import { useEffect } from "react";
 
 const AllItems = () => {
      const crafts = useLoaderData();
+     useEffect(()=>{
+          document.title = 'All Craft & Art Item'
+      },[])
     
      return (
           <div className="mb-8">

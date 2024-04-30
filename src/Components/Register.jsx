@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
 import Swal from "sweetalert2";
@@ -6,6 +6,9 @@ import Swal from "sweetalert2";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa6";
 const Register = () => {
+     useEffect(()=>{
+          document.title = 'Register'
+      },[])
      const {register, updatePP}=useContext(AuthContext)
      const  [ showPassword,setShowPassword]=useState(false)
      const [success,setSuccess]= useState('')
@@ -44,6 +47,7 @@ const Register = () => {
            
             setError('') 
      }
+
      return (
           <div >
           <div className="w-full mt-10 max-w-md mx-auto p-8 space-y-3 rounded-xl dark:bg-green-50 dark:text-gray-800">

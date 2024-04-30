@@ -1,10 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
 import Swal from "sweetalert2";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa6";
 const Login = () => {
+     useEffect(()=>{
+          document.title = 'Login'
+      },[])
      const {googleLogin, loginPass,githubLogin}=useContext(AuthContext)
      const [success,setSuccess]= useState('')
      const [ error , setError]= useState('')

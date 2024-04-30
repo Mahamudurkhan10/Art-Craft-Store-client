@@ -2,7 +2,11 @@ import { NavLink, useLoaderData } from "react-router-dom";
 
 import { BsCurrencyDollar } from "react-icons/bs";
 import { IoMdStar } from "react-icons/io";
+import { useEffect } from "react";
 const CardCollectionDetails = () => {
+     useEffect(()=>{
+          document.title = 'Card Collection Details'
+      },[])
      const craft = useLoaderData()
      const { photo, item_name, processing_time,  subcategory_Name, shortdescription, rating, price } = craft;
      return (
