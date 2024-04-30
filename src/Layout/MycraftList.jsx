@@ -36,6 +36,7 @@ const MycraftList = () => {
 
                                    });
                                    const remaining = crafts.filter(craft => craft._id !== _id)
+                                   setCrafts(remaining)
                                    setNewCrafts(remaining)
                               }
                          })
@@ -47,6 +48,7 @@ const MycraftList = () => {
                .then(res => res.json())
                .then(data => {
                     setCrafts(data)
+                 
                })
      }, [user])
   const handleCraft = (filter)=>{

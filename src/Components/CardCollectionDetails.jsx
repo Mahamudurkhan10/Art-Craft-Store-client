@@ -7,8 +7,8 @@ const CardCollectionDetails = () => {
      const { photo, item_name, processing_time,  subcategory_Name, shortdescription, rating, price } = craft;
      return (
           <div>
-               <div className="card w-3/5 mx-auto card-side bg-gray-300 shadow-xl">
-                    <figure><img src= {photo} alt="Movie" className=" p-4 "/></figure>
+               <div className="card lg:w-3/5 lg:mx-auto card-side bg-gray-300 shadow-xl">
+                    <figure><img src= {photo} alt="Movie" className=" lg:p-4 "/></figure>
                     <div  className=" mt-8 text-black p-3 " >
                          <h2  className="text-blue-600 font-bold"> {item_name} </h2>
                          <p className="font-semibold text-green-700"> subCategory Name : {subcategory_Name} </p>

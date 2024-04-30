@@ -9,8 +9,8 @@ const CardDetails = () => {
      
      return (
           <div>
-          <div className="card bg-gray-100 w-3/5 mx-auto mt-4 h-[500px] hover:shadow-2xl card-compact p-3  shadow-sm">
-                    <figure><img src={photo} className="size-[400px]" alt="Shoes" /></figure>
+          <div className="card bg-gray-100 lg:w-3/5 lg:mx-auto mt-4 h-[500px] hover:shadow-2xl card-compact p-3  shadow-sm">
+                    <figure><img src={photo} className="lg:size-[400px]" alt="Shoes" /></figure>
                     <div className="card-body">
                          <h2 className=" text-center text-xl text-blue-600 font-bold ">  {item_name} </h2>
                           <p className="font-     bold">  {subcategory_name} </p>

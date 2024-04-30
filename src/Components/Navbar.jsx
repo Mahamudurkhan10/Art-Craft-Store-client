@@ -45,7 +45,7 @@ const Navbar = () => {
             {Navbar}
           </ul>
         </div>
-        <NavLink to={'/'}>  <a className="btn btn-ghost text-xl  text-blue-500"> <span> <FaChartPie></FaChartPie> </span>   Art & Craft Store</a></NavLink>
+        <NavLink to={'/'}>  <a className="btn btn-ghost text-2xl  text-blue-500"> <span> <FaChartPie></FaChartPie> </span>   Art & Craft Store</a></NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

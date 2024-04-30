@@ -18,10 +18,12 @@ import CardDetails from './Layout/CardDetails';
 import Update from './Layout/Update';
 import Private from './Pages/Private';
 import CardCollectionDetails from './Components/CardCollectionDetails';
+import Error from './Components/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement:<Error></Error> ,
     element: <Root></Root>,
     children:[{
       path:'/',
@@ -61,7 +63,7 @@ const router = createBrowserRouter([
     },
     {
       path: '/subcraft/:id',
-      element:<CardCollectionDetails></CardCollectionDetails>,
+      element: <Private><CardCollectionDetails></CardCollectionDetails></Private>,
       loader: ({params})=> fetch(`https://art-craft-store-server-two.vercel.app/subcraft/${params.id}`)
     }
   ]
