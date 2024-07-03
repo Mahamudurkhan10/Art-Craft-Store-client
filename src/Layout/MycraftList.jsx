@@ -9,7 +9,7 @@ const MycraftList = () => {
      const { user } = useContext(AuthContext)
      const [newCrafts,setNewCrafts]=useState([])
      const [crafts, setCrafts] = useState([]);
-     const handleDelete = (_id) => {
+     const  handleDelete = (_id) => {
           console.log(_id)
           Swal.fire({
                title: "Are you sure?",
@@ -51,20 +51,20 @@ const MycraftList = () => {
                  
                })
      }, [user])
-  const handleCraft = (filter)=>{
-     if(filter ==='All' ){
-          setNewCrafts(crafts)
-     }
-     else if(filter === 'yes'){
-          const result = crafts.filter(craft => craft.customization ==='yes')
-          setNewCrafts(result)
-     }
-     else if (filter === 'no'){
-          const result = crafts.filter(craft => craft.customization ==='no')
-          setNewCrafts(result)
-     }
-
-  }
+     const handleCraft = (filter)=>{
+          if(filter ==='All' ){
+               setNewCrafts(crafts)
+          }
+          else if(filter === 'yes'){
+               const result = crafts.filter(craft => craft.customization ==='yes')
+               setNewCrafts(result)
+          }
+          else if (filter === 'no'){
+               const result = crafts.filter(craft => craft.customization ==='no')
+               setNewCrafts(result)
+          }
+     
+       }
      return (
           <div>
                <div className="flex justify-center  lg:mb-10">
